@@ -11,8 +11,6 @@
   # the nixConfig here only affects the flake itself, not the system configuration!
   nixConfig = {
     substituters = [
-      # Query the mirror of USTC first, and then the official cache.
-      "https://mirrors.ustc.edu.cn/nix-channels/store"
       "https://cache.nixos.org"
     ];
   };
@@ -39,9 +37,9 @@
     darwin,
     ...
   }: let
-    # TODO replace with your own username and system
-    username = "__USERNAME__";
-    system = "__SYSTEM__"; # aarch64-darwin or x86_64-darwin
+    # Replace with your own username and system
+    username = "Jake’s Mac mini";
+    system = "aarch64-darwin"; # aarch64-darwin or x86_64-darwin
 
     hostname = "${username}-macbook";
     specialArgs =
